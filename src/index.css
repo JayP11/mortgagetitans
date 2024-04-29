@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --font-base: "Lato", sans-serif;
+  --font-pro: "Courier Prime", monospace;
+  --color-white: #ffffff;
+  --color-black: #0d0202;
+  --color-gray: #808080;
+  --color-lightgray: rgb(230, 230, 230);
+  --color-darkgray: #a9a9a9;
+  --color-brown: brown;
+  --color-red: #e3001b;
+  --color_brand: rgb(0, 56, 114);
+  --color_brand_dark: rgb(0, 31, 63);
+  --color-green-nav: #456520;
+  --color-green-main: #8ac83f;
+  --color-green-dark: #6da548;
+  --color-blue: #162a83;
+  --color_blue_shade: #0d4598;
+  --color_orange_shade: #f29400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-base);
+  initial-scale: 1 !important;
+  /* user-select: none; */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.btn,
+.btn_bg {
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--color-white);
+  font-weight: 900;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  padding: 0.7rem 1rem;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--color_brand);
+}
+
+.btn_bg:hover {
+  border: 2px solid var(--color-green-dark);
+  color: var(--color-green-dark);
+}
+
+.heading {
+  display: flex;
+  letter-spacing: 1px;
+  gap: 0.5rem;
+  /* font-size: 1.2rem; */
+  justify-content: center;
+  margin: 2rem 0px;
+  margin-bottom: 0px;
+  color: var(--color-green-dark);
+  text-transform: capitalize;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.25rem;
+  background: var(--color-green-dark);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.slick-initialized .slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+ul {
+  list-style-type: none;
 }
