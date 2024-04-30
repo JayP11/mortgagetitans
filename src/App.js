@@ -7,7 +7,7 @@ import Footer from "./common/footer/Footer";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="mortgagetitans">
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
