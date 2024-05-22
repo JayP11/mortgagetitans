@@ -56,8 +56,8 @@ const Testimonials = () => {
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Nulla tempore porro quam quisquam nesciunt! Omnis, iure.
                   </p>
-                  <p class="home-testi-auth">John English</p>
-                  {/* <p class="home-testi-auth-desg">Sales manager</p> */}
+                  <p className="home-testi-auth">John English</p>
+                  {/* <p className="home-testi-auth-desg">Sales manager</p> */}
                 </div>
               </div>
             </div>
@@ -81,8 +81,8 @@ const Testimonials = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Omnis velit inventore perferendis sint.
                   </p>
-                  <p class="home-testi-auth">Sheetal</p>
-                  {/* <p class="home-testi-auth-desg">Microsoft Design</p> */}
+                  <p className="home-testi-auth">Sheetal</p>
+                  {/* <p className="home-testi-auth-desg">Microsoft Design</p> */}
                 </div>
               </div>
             </div>
@@ -102,8 +102,8 @@ const Testimonials = () => {
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Perferendis, distinctio?
                   </p>
-                  <p class="home-testi-auth">Ashita</p>
-                  {/* <p class="home-testi-auth-desg">Creative director</p> */}
+                  <p className="home-testi-auth">Ashita</p>
+                  {/* <p className="home-testi-auth-desg">Creative director</p> */}
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ const Testimonials = () => {
                       </>
                     )}
                   </p>
-                  <p class="home-testi-auth">Yashvi Buch</p>
+                  <p className="home-testi-auth">Yashvi Buch</p>
                 </div>
               </div>
             </div> */}
@@ -192,7 +192,7 @@ const Testimonials = () => {
                       </>
                     )}
                   </p>
-                  <p class="home-testi-auth">Shivani Patel</p>
+                  <p className="home-testi-auth">Shivani Patel</p>
                 </div>
               </div>
             </div> */}

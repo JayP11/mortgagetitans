@@ -36,7 +36,7 @@ const data = [
     name: "Construction Loans",
     description:
       "Building your dream home? We'll guide you through the construction loan process and help you turn your dream into reality.",
-    img: require("../../assets/constructionlon_img.png"),
+    img: require("../../assets/constructionlon_img.jpeg"),
     icon: require("../../assets/budget.png"),
   },
   {
@@ -60,7 +60,7 @@ const data = [
     name: "Loan Pre-approval",
     description:
       "Get pre-approved for a loan before you start house hunting. We'll help you understand your borrowing capacity and give you the confidence to make an offer on your dream home.",
-    img: require("../../assets/preapprovedloan_img.png"),
+    img: require("../../assets/preapprovedloan_image.png"),
     icon: require("../../assets/approved.png"),
   },
 ];
@@ -90,10 +90,25 @@ const ServicesHome = () => {
   };
 
   return (
-    <div style={{ background: "#e6ebf1" }}>
+    <div
+      style={{
+        background: "#e6ebf1",
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px ",
+      }}
+    >
       <div className="Batches_main">
         <div className="batches_card_main">
           <>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
+              }}
+            >
+              <h1 className="heading">Services</h1>
+              <div className="underline"></div>
+            </div>
             <div className="main_flex">
               <Slider {...settings}>
                 {data && data.length > 0
@@ -120,11 +135,10 @@ const ServicesHome = () => {
                                 className="batches_card_icon_inner webinar_card_icon"
                               />
                             </div>
-
-                            <div className="webinar_card_btn">
+                            {/* <div className="webinar_card_btn">
                               <p>Explore </p>
                               <FaArrowRight className="webinar_card_btn_icon" />
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       );

@@ -1,0 +1,88 @@
+.HomeBio_main {
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: var(--color_brand2);
+  color: var(--color-white);
+  padding: 4rem 2rem;
+  height: 75vh;
+  justify-content: space-around;
+}
+
+.bio_name_inner {
+  font-size: 50px;
+}
+
+.HomeBio_part1 {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  gap: 1rem;
+}
+.HomeBio_part2 {
+  display: flex;
+  gap: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bio_desc_main {
+  width: 60%;
+}
+.bio_desc_inner {
+  line-height: 2;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: justify;
+}
+
+.demo {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 250px;
+}
+.demo_inner {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 250px;
+}
+
+.bio_slogan {
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .bio_desc_main {
+    width: 100%;
+  }
+  .bio_name_inner {
+    font-size: 40px;
+  }
+  .bio_slogan {
+    font-size: 26px;
+  }
+  .HomeBio_part2 {
+    flex-direction: column;
+  }
+
+  .bio_desc_inner {
+    text-align: center;
+  }
+
+  .bio_desc_line {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HomeBio_main {
+    height: 100%;
+    gap: 2rem;
+  }
+}

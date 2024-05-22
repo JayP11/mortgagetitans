@@ -13,6 +13,7 @@
   --color-brown: brown;
   --color-red: #e3001b;
   --color_brand: rgb(0, 56, 114);
+  --color_brand2: rgb(0, 31, 63);
   --color_brand_dark: rgb(0, 31, 63);
   --color-green-nav: #456520;
   --color-green-main: #8ac83f;
@@ -29,7 +30,7 @@
   scroll-behavior: smooth;
   font-family: var(--font-base);
   initial-scale: 1 !important;
-  /* user-select: none; */
+  user-select: none;
 }
 
 a {
@@ -48,12 +49,15 @@ a {
   padding: 0.7rem 1rem;
   text-transform: uppercase;
   word-spacing: 2px;
-  background-color: transparent;
   transition: all 0.4s ease-in-out;
+  background-color: var(--color_brand);
 }
 
 .btn:hover {
-  background-color: var(--color_brand);
+  border: 2px solid var(--color_brand);
+  color: var(--color_brand);
+  border-radius: 4px;
+  background-color: transparent;
 }
 
 .btn_bg:hover {
@@ -65,21 +69,19 @@ a {
   display: flex;
   letter-spacing: 1px;
   gap: 0.5rem;
-  /* font-size: 1.2rem; */
   justify-content: center;
   margin: 2rem 0px;
   margin-bottom: 0px;
-  color: var(--color-green-dark);
+  color: var(--color_brand);
   text-transform: capitalize;
 }
 
 .underline {
   width: 10rem;
   height: 0.25rem;
-  background: var(--color-green-dark);
+  background: var(--color_brand);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2rem;
   margin-top: 0.5rem;
 }
 
@@ -91,3 +93,15 @@ a {
 ul {
   list-style-type: none;
 }
+
+.Calc_input_main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Form_main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+} 

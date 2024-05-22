@@ -1,0 +1,10 @@
+.privacy_para_main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.privacy_para_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}

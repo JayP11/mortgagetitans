@@ -33,60 +33,45 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="link_decor_nav">
-              <Link to="/About" className="nav_link_h3">
-                About
-              </Link>
-            </div>
-            <div className="link_decor_nav">
-              <Link to="/Resources" className="nav_link_h3">
+              <Link to="/" className="nav_link_h3">
                 Resources
               </Link>
             </div>
-            <div className="dropdown nav_link_h3" style={{ display: "flex" }}>
+            <div className="link_decor_nav">
+              <Link to="/MortgageCalc" className="nav_link_h3">
+                Calculators
+              </Link>
+            </div>
+            <div className="link_decor_nav">
+              <Link to="/ComplaintPage" className="nav_link_h3">
+                Concern
+              </Link>
+            </div>
+            {/* <div className="dropdown nav_link_h3" style={{ display: "flex" }}>
               <Link
                 to="/Services"
                 style={{
                   color: "var(--color-white)",
-                  //   color:
-                  //     location.pathname === "/Services"
-                  //       ? "var(--color-white)"
-                  //       : "var(--color-green-nav)",
+
                   display: "flex",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 Services
               </Link>
-              <div className="dropdown-content">
-                <Link to="/RollerChains">Home Loan</Link>
-                <Link to="/Refinancing">Refinancing</Link>
-                <Link to="/Investmentloan">Investment Loan</Link>
-              </div>
-            </div>
+            </div> */}
 
             <div className="link_decor_nav">
               <Link
-                to="/Contact"
+                to="/ContactUs"
                 className="nav_link_h3"
                 style={{
                   color:
-                    location.pathname === "/Contact"
+                    location.pathname === "/ContactUs"
                       ? "var(--color-white)"
                       : "var(--color-green-nav)",
                 }}>
                 Contact
-              </Link>
-            </div>
-            <div className="link_decor_nav">
-              <Link
-                to="/faq"
-                className="nav_link_h3"
-                style={{
-                  color:
-                    location.pathname === "/faq"
-                      ? "var(--color-white)"
-                      : "var(--color-green-nav)",
-                }}>
-                Faq
               </Link>
             </div>
           </div>
@@ -107,55 +92,76 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="mobile-nav-main">
             <ul className="mobile-nav-links">
-              <li>
+              <div className="link_decor_nav">
                 <Link
-                  to={"/"}
-                  onClick={() => setToggleMenu(false)}
-                  className="mobile-nav-link">
+                  to="/"
+                  className="nav_link_h3"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}>
                   Home
                 </Link>
-              </li>
-              <div className="dropdown">
-                <Link to="/About" className="mobile-nav-link">
-                  About
-                  <i className="fa fa-caret-down"></i>
-                </Link>
               </div>
-              <div className="dropdown">
-                <Link to="/Products" className="mobile-nav-link">
-                  Products
-                  <i className="fa fa-caret-down"></i>
-                </Link>
-                {/* <div className="dropdown-content">
-                  <Link to="/RollerChains" style={{ color: "red" }}>
-                    Roller Chains
-                  </Link>
-                  <Link to="/BushChains" style={{ color: "red" }}>
-                    Bush Chains
-                  </Link>
-                  <Link to="/ExtendedPitchChains" style={{ color: "red" }}>
-                    Extended Pitch Chains
-                  </Link>
-                  <Link to="/LeafChains" style={{ color: "red" }}>
-                    Leaf Chains
-                  </Link>
-                  <Link to="/AttachmentChains" style={{ color: "red" }}>
-                    Attachment Chains
-                  </Link>
-                  <Link to="/AgricultureChains" style={{ color: "red" }}>
-                    Agriculture Chains
-                  </Link>
-                </div> */}
-              </div>
-
-              <li>
+              <div className="link_decor_nav">
                 <Link
-                  to={"/Contact"}
-                  // onClick={() => setToggleMenu(false)}
-                  className="mobile-nav-link">
+                  to="/"
+                  className="nav_link_h3"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}>
+                  Resources
+                </Link>
+              </div>
+              <div className="link_decor_nav">
+                <Link
+                  to="/MortgageCalc"
+                  className="nav_link_h3"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}>
+                  Calculators
+                </Link>
+              </div>
+              <div
+                className="link_decor_nav"
+                onClick={() => {
+                  setToggleMenu(false);
+                }}>
+                <Link to="/ComplaintPage" className="nav_link_h3">
+                  Concern
+                </Link>
+              </div>
+              {/* <div className="dropdown nav_link_h3" style={{ display: "flex" }}>
+                <Link
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                  to="/Services"
+                  style={{
+                    color: "var(--color-white)",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  Services
+                </Link>
+              </div> */}
+              <div className="link_decor_nav">
+                <Link
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                  to="/ContactUs"
+                  className="nav_link_h3"
+                  style={{
+                    color:
+                      location.pathname === "/ContactUs"
+                        ? "var(--color-white)"
+                        : "var(--color-green-nav)",
+                  }}>
                   Contact
                 </Link>
-              </li>
+              </div>
             </ul>
           </div>
         )}
