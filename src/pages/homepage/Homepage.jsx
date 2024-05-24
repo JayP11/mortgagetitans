@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HomeBio,
   HomeHero,
@@ -19,6 +19,7 @@ const Homepage = () => {
       </Helmet>
       <div>
         <HomeHero />
+ 
         <ServicesHome />
         <HomeBio />
         {/* <Testimonials /> */}

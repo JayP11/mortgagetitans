@@ -30,7 +30,6 @@
   scroll-behavior: smooth;
   font-family: var(--font-base);
   initial-scale: 1 !important;
-  user-select: none;
 }
 
 a {
@@ -54,15 +53,17 @@ a {
 }
 
 .btn:hover {
-  border: 2px solid var(--color_brand);
-  color: var(--color_brand);
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
   border-radius: 4px;
   background-color: transparent;
 }
 
 .btn_bg:hover {
-  border: 2px solid var(--color-green-dark);
-  color: var(--color-green-dark);
+  border: 2px solid var(--color_brand);
+  color: var(--color_brand);
+  border-radius: 4px;
+  background-color: transparent;
 }
 
 .heading {
@@ -94,14 +95,8 @@ ul {
   list-style-type: none;
 }
 
-.Calc_input_main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 16px;
 }
-
-.Form_main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-} 

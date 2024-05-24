@@ -147,7 +147,7 @@ const ContactUs = () => {
               {/* <textarea type="text" className="c-msg-txt" /> */}
               <br />
               <button
-                className="btn"
+                className="btn btn_bg"
                 onClick={() => {
                   contactApi();
                 }}>

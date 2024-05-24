@@ -212,7 +212,7 @@ const ComplaintPage = () => {
                 }></textarea>{" "}
               <br />
               <button
-                className="btn"
+                className="btn btn_bg"
                 onClick={() => {
                   complaintApi();
                 }}>
