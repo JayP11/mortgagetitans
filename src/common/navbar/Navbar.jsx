@@ -28,7 +28,7 @@ const Navbar = () => {
 
           <div className="navbar_links_main">
             <div className="link_decor_nav">
-              <Link to="/" className="nav_link_h3">
+              <Link to="/" className="nav_link_h3 link_decor_nav">
                 Home
               </Link>
             </div>
@@ -38,13 +38,13 @@ const Navbar = () => {
               </Link>
             </div> */}
             <div className="link_decor_nav">
-              <Link to="/Calculators" className="nav_link_h3">
+              <Link to="/Calculators" className="nav_link_h3 link_decor_nav">
                 {/* <Link to="/MortgageCalc" className="nav_link_h3"> */}
                 Calculators
               </Link>
             </div>
             <div className="link_decor_nav">
-              <Link to="/ComplaintPage" className="nav_link_h3">
+              <Link to="/ComplaintPage" className="nav_link_h3 link_decor_nav">
                 Concern
               </Link>
             </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
             <div className="link_decor_nav">
               <Link
                 to="/ContactUs"
-                className="nav_link_h3"
+                className="nav_link_h3 link_decor_nav"
                 style={{
                   color:
                     location.pathname === "/ContactUs"

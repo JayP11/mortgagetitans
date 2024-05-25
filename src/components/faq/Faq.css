@@ -47,7 +47,7 @@
 
 .faq_services_inner {
   box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.35);
-  padding: 1rem;
+  padding: 0.8rem;
   /* gap: 0.4rem; */
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
   justify-content: center;
   background: var(--color-white);
   color: var(--color-black);
-  padding-bottom: 7px;
+  /* padding-bottom: 7px; */
 }
 
 .faq-question {

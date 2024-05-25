@@ -100,15 +100,13 @@ const Faq = () => {
                   toggleAccordion(index);
                   console.log("clicked");
                 }}
-                className="faq-question"
-              >
+                className="faq-question">
                 <div
                   style={{
                     fontSize: "20px",
                     color: "var(--color_brand)",
                     display: "flex",
-                  }}
-                >
+                  }}>
                   <TbAppsFilled />
                   {/* {item.icon} */}
                 </div>
@@ -122,8 +120,7 @@ const Faq = () => {
                   expanded === index
                     ? "visible"
                     : "hidden faq-answer_margin_not"
-                }`}
-              >
+                }`}>
                 {item.answer}
               </div>
             </div>
@@ -134,8 +131,7 @@ const Faq = () => {
             style={{
               letterSpacing: "1px",
               wordSpacing: "2px",
-            }}
-          >
+            }}>
             Have a question that's not listed here? Contact us today and we'll
             be happy to help!
           </b>

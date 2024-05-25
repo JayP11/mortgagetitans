@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   HomeBio,
   HomeHero,
   ServicesHome,
+  // Faq,
   // Testimonials,
-} from "../../components";
+ } from "../../components";
 import { Helmet } from "react-helmet";
 
 const Homepage = () => {

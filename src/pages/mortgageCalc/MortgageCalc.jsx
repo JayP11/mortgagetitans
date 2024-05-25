@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import MortgageCalculator from "mortgage-calculator-react";
 import "./MortgageCalc.css";
-import Form from "../../components/Form";
 import Modal from "react-modal";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Helmet } from "react-helmet";
@@ -79,7 +78,6 @@ const MortgageCalc = () => {
     let isValid = true;
 
     if (!homeValue) {
-      // setHomeValueError("Home value is required.");
       setHomeValueError("Minimum of $1 required");
       isValid = false;
     } else {
@@ -93,7 +91,6 @@ const MortgageCalc = () => {
       setDownPaymentError("");
     }
 
-    // if (!interestRate) {
     if (!rawInterestRate) {
       setInterestRateError("Interest rate is required.");
       isValid = false;
@@ -109,7 +106,6 @@ const MortgageCalc = () => {
     }
     return isValid;
   };
-  let subtitle;
 
   function openModal() {
     setIsOpen(true);
@@ -124,13 +120,13 @@ const MortgageCalc = () => {
     if (isValid) {
       calculateMortgage();
       if (getChecked !== 1) {
-         setTimeout(() => {
-           openModal();
-         }, 3000);
+        setTimeout(() => {
+          openModal();
+        }, 3000);
         // openModal();
       }
     }
-  };  
+  };
 
   const handleInterestRateChange = (e) => {
     const value = e.target.value.replace(/[^0-9.]/g, ""); // Allow only numbers and dots
@@ -389,7 +385,8 @@ const MortgageCalc = () => {
             <button
               onClick={handleCalculate}
               type="submit"
-              style={{ cursor: "pointer", margin: "0 0.5rem" }}>
+              className="btn btn_bg"
+              style={{letterSpacing:"1px", cursor: "pointer", margin: "0 0.5rem" }}>
               Calculate
             </button>
           </div>
