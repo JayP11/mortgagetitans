@@ -32,13 +32,14 @@ const Navbar = () => {
                 Home
               </Link>
             </div>
-            <div className="link_decor_nav">
+            {/* <div className="link_decor_nav">
               <Link to="/" className="nav_link_h3">
                 Resources
               </Link>
-            </div>
+            </div> */}
             <div className="link_decor_nav">
-              <Link to="/MortgageCalc" className="nav_link_h3">
+              <Link to="/Calculators" className="nav_link_h3">
+                {/* <Link to="/MortgageCalc" className="nav_link_h3"> */}
                 Calculators
               </Link>
             </div>
@@ -102,7 +103,7 @@ const Navbar = () => {
                   Home
                 </Link>
               </div>
-              <div className="link_decor_nav">
+              {/* <div className="link_decor_nav">
                 <Link
                   to="/"
                   className="nav_link_h3"
@@ -111,10 +112,10 @@ const Navbar = () => {
                   }}>
                   Resources
                 </Link>
-              </div>
+              </div> */}
               <div className="link_decor_nav">
                 <Link
-                  to="/MortgageCalc"
+                  to="/Calculators"
                   className="nav_link_h3"
                   onClick={() => {
                     setToggleMenu(false);

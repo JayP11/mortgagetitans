@@ -6,7 +6,7 @@ import Modal from "react-modal";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Helmet } from "react-helmet";
 import Notification from "../../utils/Notification";
-import { contactus_url } from "../../utils/constants";
+import { storein } from "../../utils/constants";
 import axios from "axios";
 import { mobileValidate } from "../../utils/helpers";
 
@@ -35,12 +35,23 @@ const MortgageCalc = () => {
   const [totalPayment, setTotalPayment] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [description, setDescription] = useState("");
+  const [getChecked, setChecked] = useState("");
+
   const [homeValueError, setHomeValueError] = useState("");
   const [downPaymentError, setDownPaymentError] = useState("");
   const [interestRateError, setInterestRateError] = useState("");
   const [loanDurationError, setLoanDurationError] = useState("");
   const [rawInterestRate, setRawInterestRate] = useState("");
   const inputRef = useRef(null);
+
+  useEffect(() => {
+    const isCheck = JSON.parse(localStorage.getItem("checkedValue"));
+    setChecked(isCheck);
+  }, []);
 
   const calculateMortgage = () => {
     const home = parseFloat(homeValue);
@@ -106,14 +117,20 @@ const MortgageCalc = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
   const handleCalculate = (e) => {
     e.preventDefault();
     const isValid = validateFields();
     if (isValid) {
       calculateMortgage();
-      openModal();
+      if (getChecked !== 1) {
+         setTimeout(() => {
+           openModal();
+         }, 3000);
+        // openModal();
+      }
     }
-  };
+  };  
 
   const handleInterestRateChange = (e) => {
     const value = e.target.value.replace(/[^0-9.]/g, ""); // Allow only numbers and dots
@@ -126,10 +143,6 @@ const MortgageCalc = () => {
   // const [duration, setDuration] = useState("");
   // const [principalAmt, setPrincipalAmt] = useState("");
   // const [ttlAmount, setTtlAmount] = useState("");
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [number, setnumber] = useState("");
-  const [description, setdescription] = useState("");
 
   const LeadsApi = async () => {
     console.log("abc");
@@ -158,20 +171,20 @@ const MortgageCalc = () => {
       return;
     } else {
       const formData = new FormData();
-      formData.append("", homeValue);
-      formData.append("name", downPayment);
-      formData.append("name", rawInterestRate);
-      formData.append("name", loanDuration);
-      formData.append("name", monthlyPayment);
-      formData.append("", totalPayment);
+      formData.append("home_value", homeValue);
+      formData.append("deposit", downPayment);
+      formData.append("interest_rate", rawInterestRate);
+      formData.append("loan_duration", loanDuration);
+      formData.append("principal_and_interest_repayments", monthlyPayment);
+      formData.append("total_loan_repayments", totalPayment);
       formData.append("name", name);
       formData.append("email", email);
-      formData.append("number", number);
-      formData.append("description", description);
+      formData.append("phone_number", number);
+      formData.append("brief_inquiry", description);
       console.log("formData contact us ", formData);
 
       const response = await axios
-        .post(contactus_url, formData, {
+        .post(storein, formData, {
           headers: {
             Accept: "application/x.company.v1+json",
           },
@@ -181,10 +194,17 @@ const MortgageCalc = () => {
       // console.log("response contact us ", response.data);
 
       if (response.data.success == 1) {
-        setname("");
-        setemail("");
-        setnumber("");
-        setdescription("");
+        localStorage.setItem(
+          "checkedValue",
+          JSON.stringify(response.data.data.checked)
+        );
+        // console.log("response.data.data.checked", response.data.data.checked);
+
+        window.location.reload(true);
+        setName("");
+        setEmail("");
+        setNumber("");
+        setDescription("");
         Notification("success", "Success!", response.data.message);
 
         // Notification(
@@ -248,11 +268,11 @@ const MortgageCalc = () => {
   //     // console.log("response contact us ", response.data);
 
   //     if (response.data.success == 1) {
-  //       setname("");
-  //       setemail("");
-  //       setnumber("");
+  //       setName("");
+  //       setEmail("");
+  //       setNumber("");
   //       setsubject("");
-  //       setdescription("");
+  //       setDescription("");
   //       Notification("success", "Success!", response.data.message);
 
   //       // Notification(
@@ -432,7 +452,7 @@ const MortgageCalc = () => {
                 placeholder="Enter Name"
                 value={name}
                 // className="c-txt"
-                onChange={(e) => setname(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div>
@@ -440,7 +460,7 @@ const MortgageCalc = () => {
                 type="text"
                 placeholder="Enter Email"
                 value={email}
-                onChange={(e) => setemail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 // className="c-txt"
               />
             </div>
@@ -452,7 +472,7 @@ const MortgageCalc = () => {
                 value={number}
                 onChange={(e) => {
                   if (mobileValidate(e.target.value)) {
-                    setnumber(e.target.value);
+                    setNumber(e.target.value);
                   }
                 }}
                 // className="c-txt"
@@ -464,11 +484,17 @@ const MortgageCalc = () => {
                 placeholder="Brief Content"
                 value={description}
                 // className="c-msg-txt"
-                onChange={(e) => setdescription(e.target.value)}></textarea>
+                onChange={(e) => setDescription(e.target.value)}></textarea>
             </div>
           </div>
           <div>
-            <button className="btn">Submit</button>
+            <button
+              className="btn"
+              onClick={() => {
+                LeadsApi();
+              }}>
+              Submit
+            </button>
           </div>
         </div>
       </Modal>

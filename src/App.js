@@ -35,7 +35,7 @@ function App() {
           <Route path="/ComplaintPage" element={<ComplaintPage />}></Route>
           <Route path="/Services" element={<Services />}></Route>
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />}></Route>
-          <Route path="/MortgageCalc" element={<MortgageCalc />}></Route>
+          <Route path="/Calculators" element={<MortgageCalc />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

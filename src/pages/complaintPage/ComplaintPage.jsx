@@ -142,8 +142,8 @@ const ComplaintPage = () => {
           <h2> Concern</h2>
         </div>
         <div className="complaint">
-          <div className="c-form">
-            <div className="c-form">
+          {/* <div className="c-form"> */}
+            <div className="c-form complaint_form_border">
               <label className="c-label">Name</label>
               <input
                 type="text"
@@ -219,7 +219,7 @@ const ComplaintPage = () => {
                 Submit
               </button>{" "}
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </section>
     </>

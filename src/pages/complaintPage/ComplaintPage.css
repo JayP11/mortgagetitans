@@ -6,6 +6,12 @@
   /* margin: 160px auto 60px auto; */
 }
 
+.complaint_form_border{
+  border: 2px solid;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
 .c-msg-txt{
   font-size: 18px;
   font-weight: 700;
@@ -114,5 +120,9 @@ select {
 @media screen and (max-width: 422px) {
   .complaint-heading {
     font-size: 1.575rem !important;
+  }
+
+  .complaint_form_border{
+    padding: 1.5rem;
   }
 }
