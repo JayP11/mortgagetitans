@@ -8,6 +8,7 @@ import Notification from "../../utils/Notification";
 import { storein } from "../../utils/constants";
 import axios from "axios";
 import { mobileValidate } from "../../utils/helpers";
+import CurrencyInput from "react-currency-input-field";
 
 const customStyles = {
   content: {
@@ -33,6 +34,7 @@ const MortgageCalc = () => {
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [totalMonths, setTotalMonths] = useState(0);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -72,6 +74,7 @@ const MortgageCalc = () => {
 
     setMonthlyPayment(Math.round(monthlyPayment));
     setTotalPayment(Math.round(totalPayment));
+    setTotalMonths(months); // Update total months state
   };
 
   const validateFields = () => {
@@ -216,74 +219,6 @@ const MortgageCalc = () => {
     }
   };
 
-  // const contactApi = async () => {
-  //   console.log("abc");
-  //   const regEx =
-  //     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  //   const regexpMobile = /^[0-9\b]+$/;
-
-  //   if (name == "") {
-  //     Notification("error", "Error!", "Please enter your Name!");
-  //     return;
-  //   } else if (email == "") {
-  //     Notification("error", "Error!", "Please enter your Email Address!");
-  //     return;
-  //   } else if (regEx.test(email) == false) {
-  //     Notification("error", "Error!", "Please enter valid email id!");
-  //     return;
-  //   } else if (number === "") {
-  //     alert("Enter the Mobile number....!");
-  //     return;
-  //   } else if (number.length < 10 || number.length > 10) {
-  //     // alert("Enter valid mobile number...");
-  //     Notification("error", "Error!", "Enter valid mobile number...");
-  //     return;
-  //   } else if (subject == "") {
-  //     Notification("error", "Error!", "Please enter your Subject!");
-  //     return;
-  //   } else if (description == "") {
-  //     Notification("error", "Error!", "Please enter some Description!");
-  //     return;
-  //   } else {
-  //     const formData = new FormData();
-  //     formData.append("name", name);
-  //     formData.append("email", email);
-  //     formData.append("number", number);
-  //     formData.append("subject", subject);
-  //     formData.append("description", description);
-  //     console.log("formData contact us ", formData);
-
-  //     const response = await axios
-  //       .post(contactus_url, formData, {
-  //         headers: {
-  //           Accept: "application/x.company.v1+json",
-  //         },
-  //         // "Access-Control-Allow-Origin": "*",
-  //       })
-  //       .catch((error) => console.error(`Error: ${error}`));
-  //     // console.log("response contact us ", response.data);
-
-  //     if (response.data.success == 1) {
-  //       setName("");
-  //       setEmail("");
-  //       setNumber("");
-  //       setsubject("");
-  //       setDescription("");
-  //       Notification("success", "Success!", response.data.message);
-
-  //       // Notification(
-  //       //   "success",
-  //       //   "Success!",
-  //       //   "Form has been successfully submitted"
-  //       // );
-  //       return;
-  //     } else {
-  //       Notification("error", "Error!", response.data.message);
-  //       return;
-  //     }
-  //   }
-  // };
-
   useEffect(() => {
     if (inputRef.current) {
       const length = rawInterestRate.length;
@@ -292,6 +227,18 @@ const MortgageCalc = () => {
     }
   }, [rawInterestRate]);
 
+  const formatPrice = (number) => {
+    return new Intl.NumberFormat("en-AU", {
+      style: "currency",
+      currency: "AUD",
+      minimumFractionDigits: 0,
+    }).format(number);
+  };
+
+  const handleInputChange = (e) => {
+    const rawValue = parseFloat(e.target.value); // Get the raw numerical value
+    setHomeValue(rawValue); // Update the state with the raw value
+  };
   return (
     <>
       <Helmet>
@@ -322,12 +269,26 @@ const MortgageCalc = () => {
                   }}>
                   $
                 </span>
-                <input
+                <CurrencyInput
+                  value={homeValue}
+                  decimalsLimit={2}
+                  onValueChange={setHomeValue}
+                  // id="input-example"
+                  // name="input-name"
+                  // placeholder="Please enter home value"
+                  // onValueChange={(e) => {
+                  //   setHomeValue(e.target.value);
+                  // }}
+                />
+
+                {/* <input
                   style={{ padding: "0.7rem 0.5rem" }}
                   type="number"
-                  value={homeValue}
-                  onChange={(e) => setHomeValue(e.target.value)}
-                />
+                  value={}
+                  onChange={(e) => {
+                    setHomeValue(e.target.value);
+                  }}
+                /> */}
               </div>
               {homeValueError && (
                 <p style={{ color: "red" }}>{homeValueError}</p>
@@ -346,12 +307,18 @@ const MortgageCalc = () => {
                   }}>
                   $
                 </span>
-                <input
+
+                <CurrencyInput
+                  value={downPayment}
+                  decimalsLimit={2}
+                  onValueChange={setDownPayment}
+                />
+                {/* <input
                   style={{ padding: "0.7rem 0.5rem" }}
                   type="number"
                   value={downPayment}
-                  onChange={(e) => setDownPayment(e.target.value)}
-                />
+                   onChange={(e) => setDownPayment(e.target.value)}
+                /> */}
               </div>
 
               {downPaymentError && (
@@ -363,7 +330,7 @@ const MortgageCalc = () => {
               <input
                 ref={inputRef}
                 type="text"
-                value={rawInterestRate ? `${rawInterestRate}%` : ""}
+                value={rawInterestRate ? `${rawInterestRate} %` : ""}
                 onChange={handleInterestRateChange}
               />
               {interestRateError && (
@@ -386,7 +353,11 @@ const MortgageCalc = () => {
               onClick={handleCalculate}
               type="submit"
               className="btn btn_bg"
-              style={{letterSpacing:"1px", cursor: "pointer", margin: "0 0.5rem" }}>
+              style={{
+                letterSpacing: "1px",
+                cursor: "pointer",
+                margin: "0 0.5rem",
+              }}>
               Calculate
             </button>
           </div>
@@ -405,10 +376,14 @@ const MortgageCalc = () => {
                 gap: "0.5rem",
               }}>
               <h3 style={{ letterSpacing: "1px" }}>
-                Principal and Interest Repayments: ${monthlyPayment}
+                Principal and Interest Repayments: &nbsp;
+                {formatPrice(monthlyPayment)} / month
+                {/* {monthlyPayment} */}
               </h3>
+              {/* {totalMonths} */}
               <h3 style={{ letterSpacing: "1px" }}>
-                Total Loan Repayments: ${totalPayment}
+                Total Loan Repayments: &nbsp; {formatPrice(totalPayment)}
+                {/* {totalPayment} */}
               </h3>
             </div>
           </div>

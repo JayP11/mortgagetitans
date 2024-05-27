@@ -143,82 +143,83 @@ const ComplaintPage = () => {
         </div>
         <div className="complaint">
           {/* <div className="c-form"> */}
-            <div className="c-form complaint_form_border">
-              <label className="c-label">Name</label>
-              <input
-                type="text"
-                placeholder=""
-                value={name}
-                className="c-txt"
-                onChange={(e) => setname(e.target.value)}
-              />{" "}
-              <label className="c-label">Contact Number</label>
-              <input
-                type="text"
-                placeholder=""
-                name="field-name"
-                value={number}
-                maxLength={10}
-                onChange={(e) => {
-                  if (mobileValidate(e.target.value)) {
-                    setnumber(e.target.value);
-                  }
-                }}
-                className="c-txt"
-              />
-              <label className="c-label">Email</label>
-              <input
-                type="text"
-                placeholder=""
-                value={email}
-                onChange={(e) => setemail(e.target.value)}
-                className="c-txt"
-              />
-              <label className="c-label">Complaint/Concern</label>
-              <select
-                name="Complain"
-                id="lang"
-                onChange={(e) => setSelectedOption(e.target.value)}>
-                {data && data.length <= 0 ? (
-                  <></>
-                ) : (
-                  <>
-                    <option>Select Complain / Concern</option>
-                    {data.map((item, index) => {
-                      return (
-                        <>
-                          <option value={item.id}>{item.name}</option>
-                        </>
-                      );
-                    })}
-                  </>
-                )}
-              </select>
-              <label className="c-label">Subject</label>
-              <input
-                type="text"
-                placeholder=""
-                value={subject}
-                onChange={(e) => setsubject(e.target.value)}
-                className="c-txt"
-              />
-              <label className="c-label">Details</label>
-              <textarea
-                placeholder="Please leave comment here..."
-                value={description}
-                className="c-msg-txt"
-                onChange={(e) =>
-                  setdescription(e.target.value)
-                }></textarea>{" "}
-              <br />
-              <button
-                className="btn btn_bg"
-                onClick={() => {
-                  complaintApi();
-                }}>
-                Submit
-              </button>{" "}
-            </div>
+          <div className="c-form complaint_form_border">
+            <label className="c-label">Name</label>
+            <input
+              type="text"
+              placeholder=""
+              value={name}
+              className="c-txt"
+              onChange={(e) => setname(e.target.value)}
+            />{" "}
+            <label className="c-label">Contact Number</label>
+            <input
+              type="text"
+              placeholder=""
+              name="field-name"
+              value={number}
+              maxLength={10}
+              onChange={(e) => {
+                if (mobileValidate(e.target.value)) {
+                  setnumber(e.target.value);
+                }
+              }}
+              className="c-txt"
+            />
+            <label className="c-label">Email</label>
+            <input
+              type="text"
+              placeholder=""
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              className="c-txt"
+            />
+            <label className="c-label">Complaint/Concern</label>
+            <select
+              name="Complain"
+              id="lang"
+              label="4"
+              onChange={(e) => setSelectedOption(e.target.value)}>
+              {data && data.length <= 0 ? (
+                <></>
+              ) : (
+                <>
+                  <option value="" disabled="disabled" selected>
+                    Select Complain / Concern
+                  </option>
+                  {data.map((item, index) => {
+                    return (
+                      <>
+                        <option value={item.id}>{item.name}</option>
+                      </>
+                    );
+                  })}
+                </>
+              )}
+            </select>
+            <label className="c-label">Subject</label>
+            <input
+              type="text"
+              placeholder=""
+              value={subject}
+              onChange={(e) => setsubject(e.target.value)}
+              className="c-txt"
+            />
+            <label className="c-label">Details</label>
+            <textarea
+              placeholder="Please leave comment here..."
+              value={description}
+              className="c-msg-txt"
+              onChange={(e) => setdescription(e.target.value)}></textarea>{" "}
+            <br />
+            <button
+              className="btn btn_bg"
+              onClick={() => {
+                complaintApi();
+              }}>
+              Submit
+            </button>{" "}
+          </div>
           {/* </div> */}
         </div>
       </section>

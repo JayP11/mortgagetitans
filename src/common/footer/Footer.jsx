@@ -475,7 +475,7 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-sm-4">
                     <div className="widget">
-                      <h4 class="widget-title">Quick Links</h4>
+                      <h4 className="widget-title">Quick Links</h4>
                       <ul className="links link-parts">
                         <li>
                           <Link to="/">Home</Link>
@@ -593,7 +593,7 @@ const Footer = () => {
                   © 2024 Mortgage Titans, All right reserved.
                 </p>
               </div>
-              {/* <div class="col-md-0"></div> */}
+              {/* <div className="col-md-0"></div> */}
               {/* <img src={payment} alt="payment methods" /> */}
             </div>
           </div>
