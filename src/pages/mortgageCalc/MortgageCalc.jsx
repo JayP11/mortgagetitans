@@ -199,12 +199,12 @@ const MortgageCalc = () => {
         );
         // console.log("response.data.data.checked", response.data.data.checked);
 
-        window.location.reload(true);
         setName("");
         setEmail("");
         setNumber("");
         setDescription("");
         Notification("success", "Success!", response.data.message);
+        window.location.reload(true);
 
         // Notification(
         //   "success",
