@@ -469,7 +469,6 @@ const Footer = () => {
       <section className="footer_main_dv">
         <div className="footer-middle">
           <div className="container">
-           
             <div className="row">
               <div className="col-md-9">
                 <div className="row">
@@ -480,11 +479,11 @@ const Footer = () => {
                         <li>
                           <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link to="/Resources">Resources</Link>
-                        </li>
+                        </li> */}
                         <li>
-                          <Link to="/MortgageCalc">MortgageCalc</Link>
+                          <Link to="/Calculators">Calculators</Link>
                         </li>
 
                         <li>
@@ -493,7 +492,7 @@ const Footer = () => {
 
                         <li>
                           <Link to="/PrivacyPolicy">Privacy Policy</Link>
-                        </li>
+                        </li> 
                       </ul>
                     </div>
                   </div>

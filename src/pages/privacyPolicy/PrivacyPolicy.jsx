@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import "./PrivacyPolicy.css";
 import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div
         style={{
           height: "90px",
-        }}
-      ></div>
+        }}></div>
       <Wrapper>
         <br />
         <div
@@ -22,8 +23,7 @@ const PrivacyPolicy = () => {
             color: "white",
             background: "var(--color_blue_shade)",
             padding: "4rem",
-          }}
-        >
+          }}>
           <div>
             <Link
               style={{
@@ -31,8 +31,7 @@ const PrivacyPolicy = () => {
                 fontWeight: "700",
                 fontSize: "22px",
               }}
-              to="/"
-            >
+              to="/">
               Home&nbsp;/&nbsp;
             </Link>
           </div>
@@ -40,7 +39,7 @@ const PrivacyPolicy = () => {
         </div>
         <section className="sec-privacy-policy">
           <div className="con-privacy-policy">
-            <br />{" "}
+            <br />
             <p className="privacy-policy-subheading-txt">
               At Mortgage Titans, we are committed to protecting your privacy
               and safeguarding your personal information. This Privacy Policy

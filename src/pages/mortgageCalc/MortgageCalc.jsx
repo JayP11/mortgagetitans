@@ -51,7 +51,7 @@ const MortgageCalc = () => {
 
   useEffect(() => {
     const isCheck = JSON.parse(localStorage.getItem("checkedValue"));
-    setChecked(isCheck);
+    setChecked(isCheck);    
   }, []);
 
   const calculateMortgage = () => {
@@ -125,7 +125,7 @@ const MortgageCalc = () => {
       if (getChecked !== 1) {
         setTimeout(() => {
           openModal();
-        }, 3000);
+        }, 1500);
         // openModal();
       }
     }
@@ -401,8 +401,7 @@ const MortgageCalc = () => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal">
+        style={customStyles}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <IoMdCloseCircle

@@ -8,20 +8,16 @@ import { mobileValidate } from "../../utils/helpers";
 import Notification from "../../utils/Notification";
 
 const ComplaintPage = () => {
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [number, setnumber] = useState("");
-  const [subject, setsubject] = useState("");
-  const [description, setdescription] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [subject, setSubject] = useState("");
+  const [description, setDescription] = useState("");
   const [selectedOption, setSelectedOption] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const handleChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
 
   const data = [
     {
@@ -83,17 +79,16 @@ const ComplaintPage = () => {
           headers: {
             Accept: "application/x.company.v1+json",
           },
-          // "Access-Control-Allow-Origin": "*",
-        })
+         })
         .catch((error) => console.error(`Error: ${error}`));
       // console.log("response contact us ", response.data);
 
       if (response.data.success == 1) {
-        setname("");
-        setemail("");
-        setnumber("");
-        setsubject("");
-        setdescription("");
+        setName("");
+        setEmail("");
+        setNumber("");
+        setSubject("");
+        setDescription("");
         Notification("success", "Success!", response.data.message);
         // Notification(
         //   "success",
@@ -150,7 +145,7 @@ const ComplaintPage = () => {
               placeholder=""
               value={name}
               className="c-txt"
-              onChange={(e) => setname(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
             />{" "}
             <label className="c-label">Contact Number</label>
             <input
@@ -161,7 +156,7 @@ const ComplaintPage = () => {
               maxLength={10}
               onChange={(e) => {
                 if (mobileValidate(e.target.value)) {
-                  setnumber(e.target.value);
+                  setNumber(e.target.value);
                 }
               }}
               className="c-txt"
@@ -171,7 +166,7 @@ const ComplaintPage = () => {
               type="text"
               placeholder=""
               value={email}
-              onChange={(e) => setemail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               className="c-txt"
             />
             <label className="c-label">Complaint/Concern</label>
@@ -202,7 +197,7 @@ const ComplaintPage = () => {
               type="text"
               placeholder=""
               value={subject}
-              onChange={(e) => setsubject(e.target.value)}
+              onChange={(e) => setSubject(e.target.value)}
               className="c-txt"
             />
             <label className="c-label">Details</label>
@@ -210,7 +205,7 @@ const ComplaintPage = () => {
               placeholder="Please leave comment here..."
               value={description}
               className="c-msg-txt"
-              onChange={(e) => setdescription(e.target.value)}></textarea>{" "}
+              onChange={(e) => setDescription(e.target.value)}></textarea>{" "}
             <br />
             <button
               className="btn btn_bg"
