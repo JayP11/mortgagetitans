@@ -1,0 +1,37 @@
+.MortgageCalc_main {
+  padding: 2rem;
+  margin: 2rem;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.calc_head_main {
+  font-size: 30px;
+  margin: 0rem;
+}
+
+.Calc_input_main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Form_main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .calc_head_main {
+    font-size: 25px;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .MortgageCalc_main {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+}

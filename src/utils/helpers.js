@@ -15,10 +15,3 @@ export const emailValidate = (emailid) => {
   }
   return false;
 };
-
-const formatPrice = (number) => {
-  return new Intl.NumberFormat("en-AU", {
-    style: "currency",
-    currency: "AUD",
-  }).format(number);
-};

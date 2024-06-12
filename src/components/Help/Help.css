@@ -1,0 +1,140 @@
+.help {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0px;
+  background-color: var(--color_brand_dark);
+}
+
+.help_main_head1 {
+  color: white;
+  font-weight: 700 !important;
+}
+.help_main_head {
+  color: aliceblue;
+}
+.help-left {
+  padding: 2rem;
+}
+
+.help_main_head1 {
+  font-weight: 900;
+  color: #fff;
+  /* max-width: 600px; */
+}
+
+.h-left-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.h-left-h {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.h-left-h p {
+  font-size: 16px;
+}
+.h_icon_top {
+  border-radius: 10px;
+  background: #033872;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+.h_icon_top:hover {
+  border-radius: 10px;
+  color: #033872;
+  background: white;
+}
+.h-icon {
+  padding: 7px;
+  border-radius: 5px;
+  width: 90px;
+  height: 60px;
+}
+
+.help_main_head {
+  color: #ffff;
+}
+
+.help_txt {
+  color: white;
+  margin: 0px;
+}
+.help_txt_inner {
+  color: rgb(179, 179, 179);
+  /* max-width: 300px; */
+}
+
+.help-right img {
+  height: 500px;
+}
+
+@media screen and (max-width: 1525px) {
+  .h-left-h {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .h-left-main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+  }
+  .help_main_head1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .help {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .help-right {
+    align-self: flex-end;
+  }
+  .help_main_head1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .help-right img {
+    height: 100%;
+    width: 100%;
+  }
+  .help_main_head1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .help-right img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .help-right {
+    align-self: flex-end;
+    width: 300px;
+  }
+
+  .h-icon {
+    width: 80px;
+    height: 45px;
+  }
+
+  .h-left-h {
+    align-items: center;
+    text-align: center;
+  }
+}

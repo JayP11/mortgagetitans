@@ -1,0 +1,159 @@
+.header2 {
+  margin-top: 5rem;
+  background-color: #003872;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.h-one {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.h-one h1 {
+  margin: 0;
+}
+
+.h-one p {
+  margin: 0;
+}
+
+.header2 p {
+  color: #fff;
+  font-size: 1.5rem;
+  flex: 1 10%;
+}
+
+.header2 .header-left {
+  flex: 1;
+}
+
+.header2 .header-right {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .header2 .header-left {
+    flex: 1 50%;
+    padding-right: 1rem;
+  }
+
+  .header2 .header-right {
+    flex: 1 50%;
+    padding-left: 1rem;
+  }
+}
+/* .header2 {
+  margin-top: 5rem;
+  background-color: #003872;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+}
+
+.header2 h1 {
+  font-size: 3rem;
+}
+
+.header2 p {
+  color: #fff;
+  font-size: 1.5rem;
+  flex: 1 10%;
+}
+
+.header2 .header-left {
+  flex: 1;
+}
+
+.header2 .header-right {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .header2 .header-left {
+    flex: 1 50%;
+    padding-right: 1rem;
+  }
+
+  .header2 .header-right {
+    flex: 1 50%;
+    padding-left: 1rem;
+  }
+} */
+
+.header2 {
+  margin-top: 5rem;
+  background-color: #003872;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 3rem;
+}
+
+.h-one {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header2 h1 {
+  font-size: 2.5rem;
+}
+
+.header2 p {
+  color: #fff;
+  font-size: 1.2rem;
+  flex: 1 100%;
+}
+
+.header2 .header-left {
+  flex: 1;
+}
+
+.header2 .header-right {
+  flex: 1;
+}
+
+@media screen and (max-width: 990px) {
+  .header2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .h-one {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .h-one h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+  }
+  .h-one p {
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header2 {
+    grid-template-columns: 1fr;
+  }
+}

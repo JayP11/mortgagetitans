@@ -1,0 +1,33 @@
+.bank-logos {
+  margin: 5rem auto;
+  padding: 1rem;
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; */
+  gap: 2rem;
+}
+
+.bank-logos {
+  text-align: center;
+  background: whitesmoke;
+ }
+
+.b-logo {
+  /* border: 1px solid black; */
+  /* height: 11rem; */
+}
+
+.b-logo img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+.b-logo img:hover {
+  filter: grayscale(100%) invert(2%) contrast(83%);
+}
+
+.slider {
+  margin: 0 auto;
+  padding: 2rem;
+}

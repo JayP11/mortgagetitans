@@ -1,0 +1,61 @@
+.concern {
+  padding: 2rem;
+  border-radius: 10px;
+  /* margin: 6rem auto; */
+  /* max-width: 1540px; */
+  border: 2px solid;
+  margin: 2rem;
+}
+
+.cform_concern_form{
+  gap: 1rem !important;
+}
+
+.cform_contact_form_inner{
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.concern-heading {
+  color: var(--color_brand);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.875rem !important;
+}
+
+.concern h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.c-group {
+  /* margin-bottom: 1rem; */
+}
+
+.c-label {
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #828282;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .concern {
+    margin: 1.5rem;
+    padding: 1.5rem;
+   }
+}

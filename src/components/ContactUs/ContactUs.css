@@ -1,0 +1,138 @@
+.contact-us {
+  background-color: #003872;
+  color: #fff;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0.5rem;
+}
+
+.contact-us h3 {
+  color: #fff;
+}
+
+.contact-form {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  background-color: transparent;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.contact-form input {
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  margin: 5px;
+  width: calc(100% - 12px);
+}
+
+.c-form {
+  margin: 1rem;
+}
+
+.contact-end {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 7rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.contact-end .message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  color: #003872;
+  cursor: pointer;
+}
+
+.contact-end .emergency {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emergency p {
+  width: 9rem;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contact-end .emergency p {
+  color: #fff;
+}
+
+.contact-left {
+  width: 48%;
+}
+.contact-right {
+  width: 48%;
+}
+
+.contact-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-end {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .contact-left img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-us {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .contact-left {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-left img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .contact-form {
+    max-width: 100%;
+  }
+  .contact-right {
+    width: 98%;
+  }
+  .contact_right_inner {
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .contact-left img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

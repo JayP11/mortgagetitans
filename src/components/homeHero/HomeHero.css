@@ -1,5 +1,5 @@
 .hero_main {
-  height: 90vh;
+  height: 80vh;
   background: rgba(0, 0, 0, 0.6);
   /* backdrop-filter: blur(10px) !important; */
 }
@@ -11,6 +11,15 @@
   display: flex;
   align-items: center;
 }
+
+/* .home_hero_contact_btn{
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.home_hero_contact_btn:hover{
+  border: 2px solid white;
+  background: transparent;
+} */
 
 .light_color {
   width: 100%;
@@ -124,8 +133,7 @@
 @media screen and (max-width: 1000px) {
   .homehero_main_div_bg {
     flex-wrap: wrap;
-    margin-top: 5rem;
-    padding-top: 3rem;
+     padding-top: 3rem;
     /* height: max-content; */
   }
 

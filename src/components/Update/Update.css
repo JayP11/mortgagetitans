@@ -1,0 +1,39 @@
+.update {
+  width: 97vw;
+  /* border: 1px solid black; */
+  background-image: url(https://themes.hibootstrap.com/levix/wp-content/uploads/2021/10/subscribe-bg.jpg);
+  padding: 5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  filter: brightness(0.8);
+  color: #fff;
+}
+
+.update-heading {
+  color: #fff;
+}
+
+.update-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.update-form input {
+  padding: 1rem;
+  flex: 1;
+}
+
+.subscribe {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: #003872;
+  color: #fff;
+  border: none;
+}

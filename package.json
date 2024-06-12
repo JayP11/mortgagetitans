@@ -2,7 +2,7 @@
   "name": "mortgagetitans",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mortgagetitans.com.au/",
+  "homepage": "https://mortgagetitans.com.au/test",
   "dependencies": {
     "@react-input/number-format": "^1.0.26",
     "@testing-library/jest-dom": "^5.17.0",

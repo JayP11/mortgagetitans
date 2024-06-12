@@ -1,0 +1,135 @@
+.services {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.services-main {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 5rem;
+} 
+.services_image {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 2s;
+  height: 220px !important;
+}
+.services_image:hover {
+  transform: scale(1.1);
+}
+
+.webinar_card_icon_main {
+  width: 70px;
+  height: 70px;
+  border-radius: 65px;
+  background-color: var(--color_brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -40px;
+  /* right: 25px; */
+}
+.webinar_card_icon {
+  width: 50px;
+  height: 50px;
+}
+
+.card-s {
+  overflow: hidden;
+  flex: 1 1 350px;
+  max-width: 400px;
+  text-align: left;
+  height: 400px;
+}
+
+.card-s h4 {
+  /* margin-top: 1rem; */
+  margin: 0px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-s p {
+  margin: 0px;
+  font-size: 1.2rem;
+}
+
+.card-s h5 {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #484848;
+}
+
+@media screen and (max-width: 1800px) {
+  .services-main {
+    display: flex;
+  }
+}
+@media screen and (max-width: 930px) {
+  .services-main {
+    gap: 1.5rem;
+    padding: 0 1.4rem;
+  }
+}
+
+/* .services {
+  text-align: center;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+.services-main {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 5rem;
+}
+
+.card-s {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px;
+  flex: 1 1 350px;
+  max-width: 350px;
+  text-align: left;
+}
+
+.card-s img {
+  width: 100%;
+  height: auto;
+}
+
+.card-s h4 {
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-s p {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-s h5 {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #484848;
+} */

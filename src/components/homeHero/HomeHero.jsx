@@ -10,99 +10,8 @@ import { BsClipboardHeart } from "react-icons/bs";
 // import { FiPlus, FiMinus } from "react-icons/fi";
 
 const HomeHero = () => {
-  // const [pincode, setPincode] = useState();
-  // const [faqData, setFaqData] = useState([
-  //   {
-  //     // id: 1,
-  //     icon: <FcCalendar />,
-  //     question: "Request Appointment",
-  //     answer: "Find our stores location near you.",
-  //     location_title: "Zip or City, State (required)",
-  //     location: (
-  //       <input
-  //         type="number"
-  //         value={pincode}
-  //         onChange={(e) => {
-  //           setPincode(e.target.value);
-  //         }}
-  //       />
-  //     ),
-  //   },
-  //   {
-  //     icon: <GiCarWheel />,
-  //     question: "Shop for Tires",
-  //     answer: "Find a our stores location near you.",
-  //     location_title: "Zip or City, State (required)",
-  //     location: (
-  //       <input
-  //         type="number"
-  //         value={pincode}
-  //         onChange={(e) => {
-  //           setPincode(e.target.value);
-  //         }}
-  //       />
-  //     ),
-  //   },
-  //   {
-  //     icon: <BiSolidOffer />,
-  //     question: "Get Coupons & Offers",
-  //     answer: "Find a our stores location near you.",
-  //     location_title: "Zip or City, State (required)",
-  //     location: (
-  //       <input
-  //         type="number"
-  //         value={pincode}
-  //         onChange={(e) => {
-  //           setPincode(e.target.value);
-  //         }}
-  //       />
-  //     ),
-  //   },
-  //   {
-  //     icon: <BsClipboardHeart />,
-  //     question: "Get a Repair Estimate",
-  //     answer: "Find a our stores location near you.",
-  //     location_title: "Zip or City, State (required)",
-  //     location: (
-  //       <input
-  //         type="number"
-  //         value={pincode}
-  //         onChange={(e) => {
-  //           setPincode(e.target.value);
-  //         }}
-  //       />
-  //     ),
-  //   },
-  // ]);
-
   const [expanded, setExpanded] = useState(null);
 
-  // const toggleAccordion = (index) => {
-  //   if (expanded === index) {
-  //     setExpanded(null);
-  //   } else {
-  //     setExpanded(index);
-  //   }
-  // };
-
-  const customStyles = {
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-      padding: "0px",
-      backgroundColor: "none",
-      border: "none",
-      borderRadius: "0px",
-    },
-    overlay: {
-      zIndex: 1000,
-      backgroundColor: "rgba(0, 0, 0, 0.3)",
-    },
-  };
   return (
     <>
       <div
@@ -128,16 +37,18 @@ const HomeHero = () => {
             <div
               style={{ gap: "1rem", display: "flex", flexDirection: "column" }}>
               <div className="head_hero">
-                <h1 className="homehero_welcome">Welcome to Mortgage Titans</h1>
+                <h1 style={{ margin: "0px" }} className="homehero_welcome">
+                  Welcome to Mortgage Titans
+                </h1>
               </div>
               <div className="head_hero">
-                <h1 className="homehero_slogan_line">
+                <h1 style={{ margin: "0px" }} className="homehero_slogan_line">
                   Empowering your journey to homeownership
                 </h1>
               </div>
             </div>
             <div style={{ textAlign: "justify" }}>
-              <p className="hero_para">
+              <p style={{ margin: "0px" }} className="hero_para">
                 With a deep understanding of the financial industry, I am
                 committed to delivering exceptional service and ensuring that
                 you make informed decisions every step of the way. Whether
@@ -149,7 +60,8 @@ const HomeHero = () => {
             </div>
 
             <Link
-              to="/contactus"
+              className="home_hero_contact_btn"
+              to="/contact"
               style={{ display: "flex", justifyContent: "flex-end" }}>
               <button className="btn">Contact Us</button>
             </Link>

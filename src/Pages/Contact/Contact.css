@@ -1,0 +1,142 @@
+.contact_sec {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  padding: 2rem;
+  border: 2px solid;
+  border-radius: 10px;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-us-heading {
+  color: var(--color_brand);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.875rem !important;
+}
+
+.c-form,
+.c-details {
+  flex: 1;
+}
+
+.c-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-txt {
+  border: 1px solid gray;
+  height: 40px;
+}
+
+.c-lbl {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.c-msg-txt {
+  border: 1px solid gray;
+  height: 40px;
+  height: 160px;
+  padding: 0.5rem;
+}
+
+.quick-heading {
+  color: var(--color_brand);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+
+.con-info-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.con-info-icon {
+  height: 20px;
+  width: 20px;
+  stroke: #000;
+  align-self: end;
+}
+
+.c-form-btn {
+  margin-top: 20px;
+  height: 40px;
+  background: var(--color_brand);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 120%;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.c-form-btn:hover {
+  color: var(--color_brand);
+  background: var(--color-golden);
+  border: var(--color-golden);
+}
+
+input {
+  padding-left: 0px !important;
+}
+
+.c-txt[type="text"],
+.c-msg-txt[type="text"] {
+  font-size: 120%;
+  font-weight: 600;
+}
+
+.c-ulbl {
+  margin-bottom: 0px;
+  font-size: 100%;
+  color: #000;
+  font-weight: 900;
+}
+
+.c-dlbl {
+  margin-top: 0px;
+  font-size: 115%;
+  font-weight: 400;
+  color: #515151;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 920px) {
+  .contact {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .c-form {
+    width: 100% !important;
+  }
+  .cform_contact_form {
+    margin: 0px;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .contact {
+    margin: 1.5rem;
+    padding: 1.5rem;
+   }
+}
+ 
