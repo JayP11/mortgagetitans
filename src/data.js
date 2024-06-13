@@ -112,28 +112,28 @@ export const serviceData = [
 export const chooseData = [
   {
     id: 1,
-    img: "https://themes.hibootstrap.com/levix/wp-content/uploads/2021/09/among-4.jpg",
+    img: require("../src/assets/consultation.jpg"),
     info: "Consultation",
     detail:
       " We start with a detailed consultation to understand your financial situation and goals.",
   },
   {
     id: 2,
-    img: "https://themes.hibootstrap.com/levix/wp-content/uploads/2021/09/among-one.jpg",
+    img: require("../src/assets/comparison.jpg"),
     info: "Loan Comparison",
     detail:
       "We compare mortgage products from over 40 lenders to find the best match for you.",
   },
   {
     id: 3,
-    img: "https://themes.hibootstrap.com/levix/wp-content/uploads/2021/09/among-two.jpg",
+    img: require("../src/assets/support.jpg"),
     info: "Application Support",
     detail:
       "We assist you with the application process, ensuring all paperwork is accurately completed.",
   },
   {
     id: 4,
-    img: "https://themes.hibootstrap.com/levix/wp-content/uploads/2021/09/among-three.jpg",
+    img: require("../src/assets/approval.jpg"),
     info: "Approval and Settlement",
     detail:
       "We guide you through the final steps, ensuring a smooth transition to homeownership.",

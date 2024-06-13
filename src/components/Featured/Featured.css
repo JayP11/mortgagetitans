@@ -14,6 +14,12 @@
   margin-top: 2rem;
 }
 
+/* .featured_linkdin_posts {
+  padding-top: 2rem;
+  border: 1px solid;
+  margin: 2rem;
+  border-radius: 10px;
+} */
 .card-f {
   text-align: left;
   width: 22rem;
@@ -45,18 +51,10 @@
   color: #a0a0a0;
   font-weight: 500;
 }
+ 
 
-/* @media screen and (max-width: 1280px) {
-  .featured-main {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+/* @media screen and (max-width: 400px) {
+  .featured_linkdin_posts{
+    margin: 1rem;
   }
 } */
-
-@media screen and (max-width: 990px) {
-  /* .card-f img {
-    height: auto;
-    width: 20rem;
-  } */
-}

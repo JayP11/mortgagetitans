@@ -13,15 +13,25 @@ const Details = () => {
 
   return (
     <div className="details-main">
-      <h2 style={{display:"flex",justifyContent:"center",textAlign:"center"}}>Why Choose Mortgage Titans?</h2>
+      <h2
+        className="homehero_welcome"
+        style={{
+          margin: "0px",
+          textAlign: "center",
+          color: "#033872", 
+          display: "flex",
+          justifyContent: "center",
+         }}>
+        Why Choose Mortgage Titans?
+      </h2>
+      <div className="underline"></div>
       <div className="details">
         <div className="details-left">
           {detailsData.map((data, index) => (
             <div className="details-card" key={data.id}>
               <h3
                 onClick={() => toggleDetail(index)}
-                className="details_card_h3"
-              >
+                className="details_card_h3">
                 {data.info}{" "}
                 {expandedIndex === index ? (
                   <FaCircleMinus

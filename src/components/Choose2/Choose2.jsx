@@ -5,7 +5,7 @@ import { contactus_url } from "../../utils/constants";
 import Notification from "../../utils/notification";
 import { mobileValidate } from "../../utils/helpers";
 
-const Choose2 = () => { 
+const Choose2 = () => {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [number, setnumber] = useState("");
@@ -21,18 +21,20 @@ const Choose2 = () => {
     if (name == "") {
       Notification("error", "Error!", "Please enter your Name!");
       return;
+    } else if (number === "") {
+      alert("Enter the Mobile number....!");
+      return;
     } else if (email == "") {
       Notification("error", "Error!", "Please enter your Email Address!");
-      return;
-    } else if (regEx.test(email) == false) {
-      Notification("error", "Error!", "Please enter valid email id!");
       return;
     } else if (number === "") {
       alert("Enter the Mobile number....!");
       return;
     } else if (number.length < 10 || number.length > 10) {
-      // alert("Enter valid mobile number...");
       Notification("error", "Error!", "Enter valid mobile number...");
+      return;
+    } else if (regEx.test(email) == false) {
+      Notification("error", "Error!", "Please enter valid email id!");
       return;
     } else if (subject == "") {
       Notification("error", "Error!", "Please enter your Subject!");
@@ -83,8 +85,13 @@ const Choose2 = () => {
       <div className="choose2_inner">
         <h3>Get in Touch __</h3>
         {/* <h2 style={{ margin: "0px" }}>Among Them We're</h2> */}
-        <p style={{ fontSize: "26px", fontWeight: "600", color: "white" }}>
-          {" "}
+        <p
+          style={{
+            fontSize: "26px",
+            fontWeight: "600",
+            color: "white",
+            padding: "0 1rem",
+          }}>
           Whatever your question, we’d love to hear from you.
         </p>
         {/* <form className="choose-form">

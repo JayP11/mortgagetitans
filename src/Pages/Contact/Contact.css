@@ -135,8 +135,8 @@ input {
 
 @media screen and (max-width: 400px) {
   .contact {
-    margin: 1.5rem;
-    padding: 1.5rem;
+    margin: 1.5rem !important;
+    padding: 1.5rem !important;
    }
 }
  

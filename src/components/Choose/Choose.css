@@ -169,7 +169,8 @@
 }
 
 .webinar_card_part1 {
-  height: 60%;
+  /* height: 60%; */
+  height: 200px !important;
   /* transition: 0.5s all ease-in-out; */
 }
 

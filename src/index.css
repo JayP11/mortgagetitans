@@ -96,7 +96,6 @@ button:hover {
   background-color: transparent;
 }
 
-
 .slick-initialized .slick-slide {
   display: flex !important;
   justify-content: center !important;
@@ -111,7 +110,7 @@ input select {
   margin-bottom: 1rem !important;
 }
 
-input{
+input {
   margin-bottom: 0px !important;
 }
 
@@ -131,6 +130,16 @@ input {
   border: 1px solid var(--secondary-one);
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.25rem;
+  background: var(--color_brand);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .slick-dots li button:before {

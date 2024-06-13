@@ -14,7 +14,7 @@ import Contact from "../ContactUs/ContactUs";
 import Featured from "../Featured/Featured";
 import { Helmet } from "react-helmet";
 import HomeHero from "../homeHero/HomeHero";
-import BankLogos from "../BankLogos/BankLogos";
+import BankLogos from "../BankLogos/BankLogos"; 
 
 const Home = () => {
   useEffect(() => {
@@ -27,8 +27,8 @@ const Home = () => {
       </Helmet>
       <div style={{ height: "90px" }}></div>
       <HomeHero />
-      {/* <Header /> */}
-      <div id="about">{/* <About /> */}</div>
+       {/* <Header /> */}
+      {/* <div id="about"> <About /> </div> */}
       <Header2 />
       <Services />
       <Help />

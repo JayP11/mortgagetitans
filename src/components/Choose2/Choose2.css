@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+  background-position: center;
   /* padding-left: 0.4rem; */
   text-align: center;
 }
@@ -16,7 +17,7 @@
 }
 .choose2_inner {
   padding: 4.5rem 0;
-  background:-webkit-gradient(
+  background: -webkit-gradient(
     linear,
     left top,
     right top,
@@ -25,14 +26,15 @@
   );
 }
 
-.input_transparent,.textarea_transparent{
+.input_transparent,
+.textarea_transparent {
   font-weight: 400 !important;
   background: transparent;
   color: var(--color-white);
   border: 1px solid white !important;
 }
 
-.textarea_transparent{
+.textarea_transparent {
   font-size: 20px;
 }
 .textarea_transparent::placeholder {
@@ -87,8 +89,14 @@
   cursor: pointer;
 }
 
+/* @media screen and (max-width: 500px) {
+  .choose2_inner {
+    padding: 0px;
+  }
+} */
+
 @media screen and (max-width: 400px) {
-  .choose2 {
-    padding: 2rem;
+  .choose2_inner {
+    padding: 2rem 0;
   }
 }
