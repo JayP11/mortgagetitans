@@ -10,10 +10,10 @@ const BankLogos = () => {
   const settings = {
     infinite: true,
     autoplay: true,
-    speed: 500,
     arrows: false,
     slidesToShow: 5,
     slidesToScroll: 1,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1200,

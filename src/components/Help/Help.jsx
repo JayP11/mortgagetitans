@@ -13,7 +13,7 @@ const Help = () => {
   return (
     <div className="help">
       <div className="help-left">
-        <h3 className="help_main_head">BUYING A HOME ____</h3>
+        <h3 className="help_main_head">BUYING A HOME</h3>
         <h2 className="help_main_head1">
           Your Path To Homeownership And Property Investment
         </h2>

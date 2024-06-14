@@ -1,16 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header2.css";
+import CountUp from "react-countup";
 
 const Header2 = () => {
+   const [scrollPosition, setScrollPosition] = useState(0);
+   const [isCounterStarted, setCounterStarted] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    const startCounterOnScroll = () => {
+      if (scrollPosition > 100) {
+        setCounterStarted(true);
+        window.removeEventListener("scroll", startCounterOnScroll);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", startCounterOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", startCounterOnScroll);
+    };
+  }, [scrollPosition]);
   return (
     <div className="header2">
       <div className="h-one">
-        <h1>3+</h1>
+        {isCounterStarted && (
+          <h1>
+            <CountUp start={0} end={3} duration={2.75}></CountUp>+
+          </h1>
+        )}
+
         <p>YEARS OF INDUSTRY EXPERIENCE</p>
       </div>
-      <div className="h-one">
-        <h1>100%</h1>
-        <p>DEDICATION TO CLIENT SUCCESS</p>
+      <div className="h-one ">
+        {isCounterStarted && (
+          <h1>
+            <CountUp start={0} end={100} duration={2.75}></CountUp>%
+          </h1>
+        )}
+         <p>DEDICATION TO CLIENT SUCCESS</p>
       </div>
       <div className="h-one">
         <p

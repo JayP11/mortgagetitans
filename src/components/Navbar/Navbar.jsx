@@ -12,12 +12,7 @@ const Navbar = () => {
     aboutSection.scrollIntoView({ behavior: "smooth" });
     setToggleMenu(false);
   };
-
-  // const scrollToContact = () => {
-  //   const contactSection = document.getElementById("contact_home");
-  //   contactSection.scrollIntoView({ behavior: "smooth" });
-  // };
-
+ 
   return (
     <div className="nav-main-nav-top">
       <div className="nav-main-nav">

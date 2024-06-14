@@ -54,8 +54,15 @@ const HomeHero = () => {
                 you make informed decisions every step of the way. Whether
                 you're a first-time home buyer, looking to refinance, or
                 investing in property, I am here to help you achieve your home
-                ownership goals. Contact me today at +0410 222 182 and let's get
-                started!
+                ownership goals.
+              </p>
+              <br />
+              <p style={{ margin: "0px" }} className="hero_para">
+                Contact me today at{" "}
+                <span style={{ fontWeight: "700" }}>
+                  <Link style={{color:"white"}} to="tel:+0410222182">+0410 222 182</Link>
+                </span>{" "}
+                and let's get started!
               </p>
             </div>
 

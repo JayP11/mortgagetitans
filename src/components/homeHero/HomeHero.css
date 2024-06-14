@@ -1,5 +1,5 @@
 .hero_main {
-  height: 80vh;
+  height: 85vh;
   background: rgba(0, 0, 0, 0.6);
   /* backdrop-filter: blur(10px) !important; */
 }
@@ -10,6 +10,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* .home_hero_contact_btn{
@@ -43,21 +44,23 @@
   flex-direction: column;
   -webkit-gap: 2rem;
   gap: 2rem;
-  padding-left: 3rem;
-  max-width: 50%;
+  /* padding-left: 3rem; */
+  max-width: 70%;
   color: var(--color-black);
-  align-items: flex-start;
+  align-items: center;
 }
 
 .hero_para {
   line-height: 1.5;
   letter-spacing: 0.5px;
+  text-align: center;
   color: #fff;
 }
 
 .homehero_slogan_line {
   font-size: 16px;
   display: flex;
+  justify-content: center;
 }
 
 .head_hero {

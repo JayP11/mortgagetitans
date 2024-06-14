@@ -255,7 +255,7 @@ const Calculator = () => {
                   style={{
                     position: "absolute",
                     left: 6,
-                    top: "39%",
+                    top: "54%",
                     transform: "translateY(-50%)",
                     pointerEvents: "none",
                   }}>
@@ -293,7 +293,7 @@ const Calculator = () => {
                   style={{
                     position: "absolute",
                     left: 6,
-                    top: "39%",
+                    top: "54%",
                     transform: "translateY(-50%)",
                     pointerEvents: "none",
                   }}>

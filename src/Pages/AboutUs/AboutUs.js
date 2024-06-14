@@ -23,7 +23,7 @@ const AboutUs = () => {
           />
         </div>
         <div className="about-right">
-          <h3>ABOUT OUR COMPANY ____</h3>
+          <h3>ABOUT OUR COMPANY</h3>
           <h2 className="Why_should_line">Why Should You Choose Us?</h2>
           <p
             style={{
@@ -104,7 +104,7 @@ const AboutUs = () => {
           />
         </div>
         <div className="about-right">
-          <h3>ABOUT OUR COMPANY ____</h3>
+          <h3>ABOUT OUR COMPANY</h3>
           <h2 className="Why_should_line">Why Should You Choose Us?</h2>
           <p>
             Campaign dolor sit amet conseetur diisci velit sed quiLorem ipsum

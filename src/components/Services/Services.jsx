@@ -6,7 +6,7 @@
 //   return (
 //     <>
 //       <div className="services">
-//         <h3>WHAT WE OFFER ____</h3>
+//         <h3>WHAT WE OFFER</h3>
 //         <h2 style={{ margin: "0px", fontWeight: "800" }}>Our Core Service</h2>
 //         <p
 //           style={{
@@ -83,9 +83,10 @@ const Services = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    pauseOnHover: false,
     autoplaySpeed: 3000,
-    arrows:false,
+    arrows: false,
+    dots: true,
     responsive: [
       {
         breakpoint: 1100,
@@ -105,7 +106,7 @@ const Services = () => {
   return (
     <>
       <div className="services">
-        <h3>WHAT WE OFFER __</h3>
+        <h3>WHAT WE OFFER</h3>
         <h2
           className="homehero_welcome"
           style={{ margin: "0px", textAlign: "center", color: "#033872" }}>
@@ -117,12 +118,11 @@ const Services = () => {
           style={{
             color: "gray",
             letterSpacing: "1px",
-            lineHeight: "2",
-            fontWeight: "500",
+             fontWeight: "500",
           }}>
           We look forward to helping you achieve your financial goals!
         </p>
-        <div className="services-main" style={{ paddingTop: "2rem" }}>
+        <div className="services-main">
           <Slider {...settings}>
             {serviceData.map((data) => (
               <div

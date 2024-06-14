@@ -114,6 +114,7 @@ export const chooseData = [
     id: 1,
     img: require("../src/assets/consultation.jpg"),
     info: "Consultation",
+    steps: "Step 1:",
     detail:
       " We start with a detailed consultation to understand your financial situation and goals.",
   },
@@ -121,6 +122,7 @@ export const chooseData = [
     id: 2,
     img: require("../src/assets/comparison.jpg"),
     info: "Loan Comparison",
+    steps: "Step 2:",
     detail:
       "We compare mortgage products from over 40 lenders to find the best match for you.",
   },
@@ -128,6 +130,7 @@ export const chooseData = [
     id: 3,
     img: require("../src/assets/support.jpg"),
     info: "Application Support",
+    steps: "Step 3:",
     detail:
       "We assist you with the application process, ensuring all paperwork is accurately completed.",
   },
@@ -135,21 +138,10 @@ export const chooseData = [
     id: 4,
     img: require("../src/assets/approval.jpg"),
     info: "Approval and Settlement",
+    steps: "Step 4:",
     detail:
       "We guide you through the final steps, ensuring a smooth transition to homeownership.",
   },
-  // {
-  //   id: 5,
-  //   img: "https://themes.hibootstrap.com/levix/wp-content/uploads/2021/09/among-4.jpg",
-  //   info: "Delivering A Great Customer Experience",
-  //   detail: "Your home equity by paying sit amet seeturlit sed dolor se equity",
-  // },
-  // {
-  //   id: 6,
-  //   img: "https://themes.hibootstrap.com/levix/wp-content/uploads/2021/09/among-one.jpg",
-  //   info: "Delivering A Great Customer Experience",
-  //   detail: "Your home equity by paying sit amet seeturlit sed dolor se equity",
-  // },
 ];
 
 export const teamData = [

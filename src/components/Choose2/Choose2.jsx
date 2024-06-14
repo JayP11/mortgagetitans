@@ -83,7 +83,7 @@ const Choose2 = () => {
   return (
     <div className="choose2">
       <div className="choose2_inner">
-        <h3>Get in Touch __</h3>
+        <h3>Get in Touch</h3>
         {/* <h2 style={{ margin: "0px" }}>Among Them We're</h2> */}
         <p
           style={{

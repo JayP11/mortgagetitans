@@ -24,7 +24,7 @@ const Details = () => {
          }}>
         Why Choose Mortgage Titans?
       </h2>
-      <div className="underline"></div>
+      <div className="underline" style={{marginTop:"1rem"}}></div>
       <div className="details">
         <div className="details-left">
           {detailsData.map((data, index) => (

@@ -32,7 +32,7 @@ const Featured = () => {
   };
   return (
     <div className="featured">
-      <h3>NEWS & BLOG ____</h3>
+      <h3>NEWS & BLOG</h3>
       <h2
         className="homehero_welcome"
         style={{
@@ -45,7 +45,12 @@ const Featured = () => {
           alignItems: "center",
         }}>
         Featured News And Insights
-        <div className="underline"></div>
+        <div
+          style={{
+            marginBottom: "3rem",
+            marginTop: "1rem",
+          }}
+          className="underline"></div>
       </h2>
 
       <div className="featured_linkdin_posts">

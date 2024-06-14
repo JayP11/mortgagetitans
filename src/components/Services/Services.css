@@ -7,7 +7,9 @@
 .services-main {
   max-width: 1140px;
   margin: 0 auto;
-  height: 350px;
+  /* height: 350px; */
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 .services_image {
   width: 100%;
