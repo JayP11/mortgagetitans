@@ -116,7 +116,7 @@ export const chooseData = [
     info: "Consultation",
     steps: "Step 1:",
     detail:
-      " We start with a detailed consultation to understand your financial situation and goals.",
+      "We start with a detailed consultation to understand your financial situation and goals.",
   },
   {
     id: 2,

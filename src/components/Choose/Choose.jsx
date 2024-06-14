@@ -42,7 +42,7 @@ const Choose = () => {
       <div className="batches_card_main">
         <div style={{ textAlign: "center" }}>
           <h3 style={{ textAlign: "center" }}>WHY CHOOSE US</h3>
-          <p  
+          <p
             style={{
               color: "gray",
               letterSpacing: "1px",
@@ -55,7 +55,36 @@ const Choose = () => {
             approval and beyond, we are with you every step of the way.
           </p>
         </div>
-        <div className="main_flex">
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "5rem",
+          }}>
+          <div className="choose_block_main">
+            <div className="choose_heading">1</div>
+            <div className="choose_block_inner_part2_1">
+              <div style={{ fontSize: "24px" }}>Consultation</div>
+              <div>
+                We start with a detailed consultation to understand your
+                financial situation and goals.
+              </div>
+            </div>
+          </div>
+          <div className="choose_block_main" style={{ gap: "2rem" }}>
+            <div className="choose_heading2">2</div>
+            <div className="choose_block_inner_part2_2">
+              <div style={{ fontSize: "24px" }}>Loan Comparison</div>
+              <div>
+                We compare mortgage products from over 40 lenders to find the
+                best match for you.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="main_flex">
           <Slider {...settings}>
             {chooseData.map((data) => {
               return (
@@ -74,7 +103,7 @@ const Choose = () => {
               );
             })}
           </Slider>
-        </div>
+        </div> */}
       </div>
     </div>
   );

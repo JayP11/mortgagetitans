@@ -23,7 +23,7 @@
   --color_orange_shade: #f29400;
 }
 body {
-  user-select: none; /* Standard syntax */
+  /* user-select: none;  */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
