@@ -56,30 +56,75 @@ const Choose = () => {
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "5rem",
-          }}>
+        <div className="Batches_grid_main">
           <div className="choose_block_main">
             <div className="choose_heading">1</div>
             <div className="choose_block_inner_part2_1">
-              <div style={{ fontSize: "24px" }}>Consultation</div>
+              <div className="choose_block_head">
+                <span className="choose_num">1{")"}&nbsp;</span>Consultation
+              </div>
               <div>
                 We start with a detailed consultation to understand your
                 financial situation and goals.
               </div>
             </div>
+            <div className="choose_arrow_main">
+              <div className="choose_arrow_main1"></div>
+              <div className="choose_arrow_main2"></div>
+            </div>
           </div>
-          <div className="choose_block_main" style={{ gap: "2rem" }}>
-            <div className="choose_heading2">2</div>
+          <div className="choose_block_main">
+            <div
+              className="choose_heading2"
+              style={{ color: "box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" }}>
+              2
+            </div>
             <div className="choose_block_inner_part2_2">
-              <div style={{ fontSize: "24px" }}>Loan Comparison</div>
+              <div className="choose_block_head">
+                <span className="choose_num">2{")"}&nbsp; </span>Loan Comparison
+              </div>
               <div>
                 We compare mortgage products from over 40 lenders to find the
                 best match for you.
               </div>
+            </div>
+            <div className="choose_arrow_main">
+              <div className="choose_arrow_main1"></div>
+              <div className="choose_arrow_main2"></div>
+            </div>
+          </div>
+          <div className="choose_block_main">
+            <div className="choose_heading3">3</div>
+            <div className="choose_block_inner_part2_3">
+              <div className="choose_block_head">
+                <span className="choose_num">3{")"}&nbsp; </span>
+                Application Support
+              </div>
+              <div>
+                We assist you with the application process, ensuring all
+                paperwork is accurately completed.
+              </div>
+            </div>
+            <div className="choose_arrow_main">
+              <div className="choose_arrow_main1"></div>
+              <div className="choose_arrow_main2"></div>
+            </div>
+          </div>
+          <div className="choose_block_main">
+            <div className="choose_heading2">4</div>
+            <div className="choose_block_inner_part2_4">
+              <div className="choose_block_head">
+                <span className="choose_num">4{")"}&nbsp; </span> Approval and
+                Settlement
+              </div>
+              <div>
+                We guide you through the final steps, ensuring a smooth
+                transition to homeownership.
+              </div>
+            </div>
+            <div className="choose_arrow_main">
+              <div className="choose_arrow_main1"></div>
+              <div className="choose_arrow_main2"></div>
             </div>
           </div>
         </div>
