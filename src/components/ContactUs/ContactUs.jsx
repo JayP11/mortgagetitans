@@ -5,7 +5,7 @@ import { BiPhoneCall } from "react-icons/bi";
 import axios from "axios";
 import { contactus_url } from "../../utils/constants";
 import { mobileValidate } from "../../utils/helpers";
-import Notification from "../../utils/notification";
+import Notification from "../../utils/Notification";
 
 const ContactUs = () => {
   useEffect(() => {

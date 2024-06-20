@@ -10,7 +10,8 @@ const Footer = () => {
         <div className="footer-middle">
           <div className="container">
             <div
-              style={{ height: "50px", width: "290px", paddingBottom: "2rem" }}>
+              style={{ height: "50px", width: "290px", paddingBottom: "2rem" }}
+            >
               <img
                 src={logo}
                 alt=""
@@ -29,7 +30,8 @@ const Footer = () => {
                       <h4 className="widget-title">Quick Links</h4>
                       <ul
                         className="links link-parts"
-                        style={{ padding: "0px" }}>
+                        style={{ padding: "0px" }}
+                      >
                         <li>
                           <Link to="/">Home</Link>
                         </li>
@@ -45,6 +47,9 @@ const Footer = () => {
                         <li>
                           <Link to="/contact">Contact</Link>
                         </li>
+                        <li>
+                          <Link to="/privacy-policy">Privacy Policy</Link>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -53,31 +58,35 @@ const Footer = () => {
                       <li className="cont_info_data">
                         <h4
                           className="widget-title"
-                          style={{ marginBottom: "10px" }}>
+                          style={{ marginBottom: "10px" }}
+                        >
                           Phone
                         </h4>
                         <span>
                           <a href="tel:+0410222182">+0410 222 182</a>
                         </span>
                       </li>
-                      <li className="cont_info_data">
+                      {/* <li className="cont_info_data">
                         <h4
                           className="widget-title"
-                          style={{ marginBottom: "10px" }}>
+                          style={{ marginBottom: "10px" }}
+                        >
                           Whatsapp
                         </h4>
                         <span>
                           <a
                             href="http://api.whatsapp.com/send?phone=0410222182&text=Let%27s%20Get%20in%20Touch"
-                            target="_blank">
+                            target="_blank"
+                          >
                             +0410 222 182
                           </a>
                         </span>
-                      </li>
+                      </li> */}
                       <li className="cont_info_data">
                         <h4
                           className="widget-title"
-                          style={{ marginBottom: "10px" }}>
+                          style={{ marginBottom: "10px" }}
+                        >
                           Email
                         </h4>
                         <p style={{ margin: "0px" }}>
@@ -86,7 +95,8 @@ const Footer = () => {
                             style={{
                               color: "white",
                               fontSize: "16px",
-                            }}>
+                            }}
+                          >
                             jash.shah@mortgagetitans.com.au
                           </Link>
                         </p>
@@ -122,7 +132,8 @@ const Footer = () => {
                   color: "whitesmoke",
                   margin: "0px",
                   padding: "1rem 0",
-                }}>
+                }}
+              >
                 Financial needs and requirements need to be reviewed prior to
                 any tailored advice being provided or any offer or acceptance of
                 a loan product.
@@ -133,18 +144,21 @@ const Footer = () => {
               style={{
                 justifyContent: "space-between",
                 flexWrap: "wrap",
-              }}>
+              }}
+            >
               <div
                 className="col-md-8"
                 style={{
                   padding: "0px",
-                }}>
+                }}
+              >
                 <p
                   className="footer-copyright py-3 pr-4 mb-0"
                   style={{
                     color: "whitesmoke",
                     margin: "0px",
-                  }}>
+                  }}
+                >
                   ABN 99 672 958 459 | FBAA Member M-356883 | Australian Credit
                   License number 384704 | Credit Representative number 557367
                 </p>
@@ -155,7 +169,8 @@ const Footer = () => {
                   style={{
                     color: "whitesmoke",
                     margin: "0px",
-                  }}>
+                  }}
+                >
                   © 2024 Mortgage Titans, All right reserved.
                 </p>
               </div>

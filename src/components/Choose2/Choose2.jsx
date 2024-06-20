@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Choose2.css";
 import axios from "axios";
 import { contactus_url } from "../../utils/constants";
-import Notification from "../../utils/notification";
+import Notification from "../../utils/Notification";
 import { mobileValidate } from "../../utils/helpers";
 
 const Choose2 = () => {
@@ -91,7 +91,8 @@ const Choose2 = () => {
             fontWeight: "600",
             color: "white",
             padding: "0 1rem",
-          }}>
+          }}
+        >
           Whatever your question, we’d love to hear from you.
         </p>
         {/* <form className="choose-form">
@@ -104,10 +105,12 @@ const Choose2 = () => {
         <section className="contact_sec">
           <div
             className="contact"
-            style={{ padding: "0 2rem", margin: "0 2rem" }}>
+            style={{ padding: "0 2rem", margin: "0 2rem" }}
+          >
             <div
               className="c-form cform_contact_form"
-              style={{ marginTop: "0px" }}>
+              style={{ marginTop: "0px" }}
+            >
               <label className="c-lbl">Name</label>
               <input
                 type="text"
@@ -155,13 +158,15 @@ const Choose2 = () => {
                 placeholder="Please leave comment here..."
                 value={description}
                 className="c-msg-txt  textarea_transparent"
-                onChange={(e) => setdescription(e.target.value)}></textarea>
+                onChange={(e) => setdescription(e.target.value)}
+              ></textarea>
               <br />
               <button
                 className="submit"
                 onClick={() => {
                   contactApi();
-                }}>
+                }}
+              >
                 Submit
               </button>
             </div>

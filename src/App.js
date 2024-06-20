@@ -7,6 +7,7 @@ import Calculator from "./Pages/Calculator/Calculator";
 import Concern from "./Pages/Concern/Concern";
 import Contact from "./Pages/Contact/Contact";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import PrivacyPolicy from "./Pages/privacyPolicy/PrivacyPolicy";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/concern" element={<Concern />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </BrowserRouter>

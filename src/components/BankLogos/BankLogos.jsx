@@ -57,17 +57,24 @@ const BankLogos = () => {
           }}>
           Our Lender Panel
         </h2>
-        <div className="underline"></div>
+        <div
+          className="underline"
+          style={{
+            marginTop: "1rem",
+           }}></div>
 
         <Slider {...settings} className="slider">
           <div className="b-logo">
             <img src={images.bendigo_bank} alt="bendigo" />
           </div>
           <div className="b-logo">
-            <img src={images.MyState_Bank} alt="state" />
+            <img src={images.sydneyBank} alt="think_tank" />
           </div>
           <div className="b-logo">
-            <img src={images.UBank} alt="ubank" />
+            <img src={images.cba} alt="think_tank" />
+          </div>
+          <div className="b-logo">
+            <img src={images.fmc} alt="think_tank" />
           </div>
           <div className="b-logo">
             <img src={images.ING} alt="ing" />
@@ -75,11 +82,22 @@ const BankLogos = () => {
           <div className="b-logo">
             <img src={images.MAMoney} alt="ma" />
           </div>
+
+          <div className="b-logo">
+            <img src={images.MyState_Bank} alt="state" />
+          </div>
+          <div className="b-logo">
+            <img src={images.orde} alt="think_tank" />
+          </div>
           <div className="b-logo">
             <img src={images.Ownhome} alt="own_home" />
           </div>
+
           <div className="b-logo">
             <img src={images.Thinktank_Logo} alt="think_tank" />
+          </div>
+          <div className="b-logo">
+            <img src={images.UBank} alt="ubank" />
           </div>
         </Slider>
       </div>

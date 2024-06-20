@@ -22,6 +22,12 @@
   gap: 2rem;
 }
 
+.c_msg_textarea {
+  font-size: 18px;
+  padding: 0.7em !important;
+  width: 100%;
+}
+
 @media screen and (max-width: 500px) {
   .calc_head_main {
     font-size: 25px;
