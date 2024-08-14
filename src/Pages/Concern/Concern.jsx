@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 import { concern_api } from "../../utils/constants";
 import { mobileValidate } from "../../utils/helpers";
-import Notification from "../../utils/notification";
+import Notification from "../../utils/Notification";
 
 const Concern = () => {
   const [name, setname] = useState("");
@@ -150,7 +150,8 @@ const Concern = () => {
               <select
                 name="Complain"
                 id="lang"
-                onChange={(e) => setSelectedOption(e.target.value)}>
+                onChange={(e) => setSelectedOption(e.target.value)}
+              >
                 {data && data.length <= 0 ? (
                   <></>
                 ) : (
@@ -183,16 +184,16 @@ const Concern = () => {
                 placeholder="Please leave comment here..."
                 value={description}
                 className="c-msg-txt"
-                onChange={(e) =>
-                  setdescription(e.target.value)
-                }></textarea>{" "}
+                onChange={(e) => setdescription(e.target.value)}
+              ></textarea>{" "}
             </div>
             <br />
             <button
               className="submit"
               onClick={() => {
                 complaintApi();
-              }}>
+              }}
+            >
               Submit
             </button>
           </div>

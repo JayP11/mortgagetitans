@@ -3,7 +3,7 @@ import "./Contact.css";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import { contactus_url } from "../../utils/constants";
-import Notification from "../../utils/notification";
+import Notification from "../../utils/Notification";
 import { mobileValidate } from "../../utils/helpers";
 import { Link } from "react-router-dom";
 
@@ -95,7 +95,10 @@ const Contact = () => {
         <div style={{ height: "90px" }}></div>
         <div className="contact">
           <div className="c-form cform_contact_form">
-            <h1 style={{margin:"0px"}} className="contact-us-heading"> Contact Us</h1>
+            <h1 style={{ margin: "0px" }} className="contact-us-heading">
+              {" "}
+              Contact Us
+            </h1>
             <div className="c-form cform_contact_form">
               <label className="c-lbl">Name</label>
               <input
@@ -143,14 +146,16 @@ const Contact = () => {
                 placeholder="Please leave comment here..."
                 value={description}
                 className="c-msg-txt"
-                onChange={(e) => setdescription(e.target.value)}></textarea>
+                onChange={(e) => setdescription(e.target.value)}
+              ></textarea>
               {/* <textarea type="text" className="c-msg-txt" /> */}
               <br />
               <button
                 className="submit"
                 onClick={() => {
                   contactApi();
-                }}>
+                }}
+              >
                 Submit
               </button>
             </div>
@@ -166,7 +171,8 @@ const Contact = () => {
             <div style={{ marginBottom: "1rem" }}>
               <Link
                 className="c-dlbl"
-                to="mailto:jash.shah@mortgagetitans.com.au">
+                to="mailto:jash.shah@mortgagetitans.com.au"
+              >
                 jash.shah@mortgagetitans.com.au
               </Link>
             </div>

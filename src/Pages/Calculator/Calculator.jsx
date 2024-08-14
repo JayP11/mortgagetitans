@@ -3,7 +3,7 @@ import "./Calculator.css";
 import Modal from "react-modal";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Helmet } from "react-helmet";
-import Notification from "../../utils/notification";
+import Notification from "../../utils/Notification";
 import { storein } from "../../utils/constants";
 import axios from "axios";
 import { mobileValidate } from "../../utils/helpers";
@@ -247,7 +247,8 @@ const Calculator = () => {
               flexDirection: "column",
               gap: "1rem",
             }}
-            onSubmit={handleCalculate}>
+            onSubmit={handleCalculate}
+          >
             <div className="Calc_input_main" style={{ padding: "0 0.5rem" }}>
               <label>Home Value:</label>
               <div style={{ position: "relative", display: "inline-block" }}>
@@ -258,7 +259,8 @@ const Calculator = () => {
                     top: "54%",
                     transform: "translateY(-50%)",
                     pointerEvents: "none",
-                  }}>
+                  }}
+                >
                   $
                 </span>
                 <CurrencyInput
@@ -296,7 +298,8 @@ const Calculator = () => {
                     top: "54%",
                     transform: "translateY(-50%)",
                     pointerEvents: "none",
-                  }}>
+                  }}
+                >
                   $
                 </span>
 
@@ -355,7 +358,8 @@ const Calculator = () => {
                 letterSpacing: "1px",
                 cursor: "pointer",
                 margin: "0 0.5rem",
-              }}>
+              }}
+            >
               Calculate
             </button>
           </div>
@@ -365,7 +369,8 @@ const Calculator = () => {
               display: "flex",
               flexDirection: "column",
               gap: "1rem",
-            }}>
+            }}
+          >
             <h2 className="calc_head_main" style={{ margin: "0px" }}>
               Results:
             </h2>
@@ -374,7 +379,8 @@ const Calculator = () => {
                 display: "flex",
                 flexDirection: "column",
                 gap: "0.7rem",
-              }}>
+              }}
+            >
               <h3 style={{ letterSpacing: "1px", margin: "0px" }}>
                 Principal and Interest Repayments: &nbsp;
                 {formatPrice(monthlyPayment)} / month
@@ -403,7 +409,8 @@ const Calculator = () => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        style={customStyles}>
+        style={customStyles}
+      >
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <IoMdCloseCircle
@@ -418,7 +425,8 @@ const Calculator = () => {
             needs? Let's get started!
           </div>
           <div
-            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+          >
             <div>
               <input
                 type="text"
@@ -457,7 +465,8 @@ const Calculator = () => {
                 placeholder="Brief Content"
                 value={description}
                 // className="c-msg-txt"
-                onChange={(e) => setDescription(e.target.value)}></textarea>
+                onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
             </div>
           </div>
           <div>
@@ -465,7 +474,8 @@ const Calculator = () => {
               className="btn"
               onClick={() => {
                 LeadsApi();
-              }}>
+              }}
+            >
               Submit
             </button>
           </div>

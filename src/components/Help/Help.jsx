@@ -7,7 +7,8 @@ import { IoBuildSharp } from "react-icons/io5";
 import { BiSolidHomeCircle } from "react-icons/bi";
 // import { BiBrain } from "react-icons/bi";
 import { TbGrowth } from "react-icons/tb";
-import { FaGooglePlay } from "react-icons/fa";
+// import { FaGooglePlay } from "react-icons/fa";
+import { RiHomeSmileLine } from "react-icons/ri";
 
 const Help = () => {
   return (
@@ -49,7 +50,7 @@ const Help = () => {
           </div>
           <div className="h-left-h">
             <div className="h_icon_top">
-              <IoBuildSharp className="h-icon" />
+              <RiHomeSmileLine className="h-icon" />
             </div>
             <div className="help_txt">
               <h3 className="help_txt">Enjoy the Comfort of Your Own Home</h3>

@@ -49,7 +49,8 @@ const Choose = () => {
               lineHeight: "2",
               fontWeight: "500",
               padding: "0 1rem",
-            }}>
+            }}
+          >
             At Mortgage Titans, we follow a streamlined process to ensure you
             get the best mortgage deal. From the initial consultation to loan
             approval and beyond, we are with you every step of the way.
@@ -76,7 +77,8 @@ const Choose = () => {
           <div className="choose_block_main">
             <div
               className="choose_heading2"
-              style={{ color: "box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" }}>
+              style={{ color: "box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" }}
+            >
               2
             </div>
             <div className="choose_block_inner_part2_2">
